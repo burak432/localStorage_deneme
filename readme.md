@@ -5,3 +5,9 @@
 * You can click on listed items for remove them individually, or remove all with the button below. 
 * Added/removed items also added/removed from local storage too. 
 * When page refreshed, it recalls all items from localStorage and updates DOM.
+
+[![demo][1]][2]
+
+[1]:  localstorage.jpg
+[2]:  https://burak432.github.io/localStorage_deneme/ "Click for demo"
+
