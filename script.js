@@ -26,6 +26,7 @@ form.addEventListener("submit", (e) => {
   if (input1.value !== "") {
     itemsArr.push(input1.value);
     listeUpdate(itemsArr);
+    input1.value = "";
   }
 });
 
@@ -35,10 +36,13 @@ btnSil.addEventListener("click", () => {
   localStorage.clear();
 });
 
-// delete "li" elements from dom. i dont know how to delete from localstorage and array. 
+// delete "li" elements from dom. its now also delete from localstorage and array. 
 liste.addEventListener("click", (e) => {
    if (e.target.tagName === "LI") {
-     e.target.remove();
+    let silinecek = e.target.innerHTML;
+    itemsArr.splice(itemsArr.indexOf(silinecek), 1);
+    e.target.remove();
+    localStorage.setItem("items", JSON.stringify(itemsArr));
    }
 });
 
